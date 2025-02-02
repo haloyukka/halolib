@@ -15,6 +15,14 @@ cd [setup.py]と同階層
 pip install .
 ```
 
+## 使い方
+
+```bash
+>>> import halolib
+>>> halolib.output()
+halo world
+```
+
 ## アンインストール方法
 ```
 pip uninstall halolib
