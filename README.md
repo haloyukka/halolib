@@ -1,5 +1,5 @@
 # halolib
-# ライブラリを作る
+## ライブラリを作る
 基本ディレクトリ構成
 ```
 halolib
@@ -9,24 +9,24 @@ halolib
     └── halolib.py
 ```
 
-# インストール方法
+## インストール方法
 ```
 cd [setup.py]と同階層
 pip install .
 ```
 
-# アンインストール方法
+## アンインストール方法
 ```
 pip uninstall halolib
 ```
 
-# 開発（editable）モードでのインストール
+## 開発（editable）モードでのインストール
 ```
 pip install -e .
 ```
 `editable`モードでは、ライブラリ更新時に```pip install```し直さなくても、その内容が即座に反映される。
 
-# 自作ライブラリをGitHubからインストール
+## 自作ライブラリをGitHubからインストール
 ```
 pip install git+<リポジトリのURL>
 ```
@@ -36,15 +36,15 @@ pip install git+<リポジトリのURL>
 
 <br>
 
-# \_\_init\_\_.pyの書き方
+## \_\_init\_\_.pyの書き方
 
 `__init__.py`とは2つの意味がある  
 1つはPythonディレクトリを表す役割を担う  
 1つはモジュールをimportするときの初期化処理を行う  
 
-## import ～とfrom ～ import ～の違い
+### import ～とfrom ～ import ～の違い
 
-### import
+#### import
 ```
 import モジュール名 [as 別名]
 ```
@@ -71,7 +71,7 @@ plt.plot(A)
 plt.show()
 ```
 
-### from import
+#### from import
 from モジュール名 import 機能名  
 あるモジュールのある機能を追加する。  
 ある機能のみを追加したいとき、モジュール名を書かずに使うことが出来る。  
@@ -87,7 +87,7 @@ show()
 
 この2つには大差がないが`__init__.py`では意味が変わる。
 
-## \_\_init\_\_.pyの書き方
+### \_\_init\_\_.pyの書き方
 
 パッケージの例
 ```
@@ -114,7 +114,7 @@ def chkprint():
 パッケージにするときの同じディレクトリ内のモジュールのimportはパッケージ名から書いた方が良い  
 import (パッケージ名).(モジュール名)
 
-# \_\_init\_\_.pyの中身が空のとき
+## \_\_init\_\_.pyの中身が空のとき
 `__init__.py`は何も書かなくてもよい。  
 ただし、importして関数を使いたい時、多少面倒になる。  
 例えば、`main.py`の`chkprint2`関数を使い時、次のように入力する。  
@@ -142,7 +142,7 @@ ti.chkprint2()
 ```
 `test_imt`には`chkprint2`という関数はない。
 
-# \_\_init\_\_.pyでモジュール名をカット
+## \_\_init\_\_.pyでモジュール名をカット
 `main.py`の`chkprint2`関数をモジュール名をカットして使いたいときには次のようにする。  
 
 ```__init__.py`の中身
